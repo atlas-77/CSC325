@@ -2,15 +2,11 @@
     "name": "flutterapp",
     "context": "..",
     "dockerFile": "../Dockerfile",
-    "remoteUser": "developer",
-    "customizations/vscode/settings": {
-      "terminal.integrated.shell.linux": null
-    },
     "runArgs": ["--privileged"],
     "customizations/vscode/extensions": ["Dart-Code.flutter"],
     "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/developer/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/home/developer/workspace",
-    "build": { "dockerfile": "Dockerfile" }
+    "features": {"ghcr.io/jarrodcolburn/features/flutter-sdk:0": {} }
 
       
   }
