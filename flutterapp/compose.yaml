@@ -1,0 +1,5 @@
+services:
+  flutter:
+    build: .
+  redis:
+    image: "flutterapp"
