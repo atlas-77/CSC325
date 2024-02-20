@@ -12,5 +12,3 @@ WORKDIR /home/developer
 RUN git clone https://github.com/flutter/flutter.git
 ENV PATH "$PATH:/home/developer/flutter/bin"
 
-# Run basic check to download Dart SDK
-#RUN flutter doctor
