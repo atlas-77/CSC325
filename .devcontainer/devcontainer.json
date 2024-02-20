@@ -1,14 +1,14 @@
 {
-	"name": "flutterapp",
-	"context": "..",
-	"dockerFile": "../Dockerfile",
+	"name": "flutterapp", //name
+	"context": "..",  
+	"dockerFile": "../Dockerfile", //location of dockerfile
 	"remoteUser": "developer",
 	"settings": {
 	  "terminal.integrated.shell.linux": null
 	},
 	"runArgs": ["--privileged"],
-	"extensions": ["dart-code.flutter"],
+	"extensions": ["dart-code.flutter"],  //installs flutter extension
 	"workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/developer/workspace,type=bind,consistency=delegated",
-	"workspaceFolder": "../workspace"
+	"workspaceFolder": "../workspace" // gives workspace
 
 }
