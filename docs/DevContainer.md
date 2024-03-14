@@ -5,3 +5,7 @@ A DevContainer is what the name suggests - a container in which the user can dev
 I used an Ubuntu image to develop in, and a Docker container to host it. My devcontainer.json file includes the Flutter extension for VSCode, and my Dockerfile includes the Ubuntu image as well as the Flutter SDK.
 ## Integration with VSCode
 As stated above, my devcontainer file includes the Flutter extension for VSCode, and using the Remote Window button in the very bottom left of VSCode the user can work within the DevContainer. It includes the basics needed to work with Flutter.
+## Usage
+To be honest, I didn't use the DevContainer for the Flutter app creation - I've never really worked with DevContainers before and it was difficult to even get mine working, which I will describe below under Challenges and Solutions
+To use my DevContainer - in bash, in the .devcontainer directory, run "$ docker build -t flutterapp ." then "$ docker compose up" - this builds the container and runs it.  I used VSCode as an IDE, and used its Flutter extension to create the app.
+## Challenges and Solutions
