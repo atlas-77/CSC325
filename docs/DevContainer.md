@@ -15,4 +15,4 @@ then
 ## Challenges and Solutions
 Challenges - to be frank, the whole thing. DevContainers are pretty new to me. In my experience in the workplace, I just took a day or two to setup my dev environment on a laptop and ran with that. So, Solutions - in making this I had to google a lot, and I'm still not entirely sure it works like I want it to.
 ## Conclusion
-The benefits of DevContainer usage are apparent - being able to quickly set up a self-contained development environment anywhere where the container is accessible is obviously very useful.   
+The benefits of DevContainer usage are apparent - being able to quickly set up a self-contained development environment anywhere where the container is accessible is obviously very useful, especially if the user is developing from different locations. Insights gained? To be honest, just that I don't really enjoy making DevContainers and will delegate the creation process to other team members wherever possible.
