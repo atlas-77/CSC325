@@ -8,9 +8,9 @@ As stated above, my devcontainer file includes the Flutter extension for VSCode,
 ## Usage
 To behonest, I didn't use the DevContainer for the Flutter app creation - I've never really worked with DevContainers before and it was difficult to even get mine working, which I will describe below under Challenges and Solutions
 To use my DevContainer - in bash, in the .devcontainer directory, run
- 	`code` $ docker build -t flutterapp .
+ 	`$ docker build -t flutterapp .`
 then
-    `code` $ docker compose up 
+    `$ docker compose up` 
 -this builds the container and runs it.  I used VSCode as an IDE, and used its Flutter extension to create the app.
 ## Challenges and Solutions
 Challenges - to be frank, the whole thing. DevContainers are pretty new to me. In my experience in the workplace, I just took a day or two to setup my dev environment on a laptop and ran with that. So, Solutions - in making this I had to google a lot, and I'm still not entirely sure it works like I want it to.
