@@ -1,18 +1,27 @@
-            - name: Clone Github Repo Action
+  name: Clone Github Repo Action
   # You may pin to the exact commit or the version.
   # uses: GuillaumeFalourd/clone-github-repo-action@19817562c346ff60f9935158dede6c5ece8fd0ac
-  uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+  steps:
+    - uses: GuillaumeFalourd/clone-github-repo-action@v2.3
   with:
-    # Repository Owner
-    owner: atlas-77
-    # Repository name
-    repository: https://github.com/atlas-77/CSC325
-    # PAT with repository scope (https://github.com/settings/tokens)
-    access-token: # optional
-    # Depth of the clone (default: full history)
-    depth: # optional, default is 
-    # Branch name (default: main)
-    branch: # optional, default is main
-    # Clone with submodules
-    submodule: # optional, default is false
-          
+      # Repository Owner
+      owner: atlas-77
+      # Repository name
+      repository: https://github.com/atlas-77/CSC325
+      # PAT with repository scope (https://github.com/settings/tokens)
+      access-token: # optional
+      # Depth of the clone (default: full history)
+      depth: # optional, default is 
+      # Branch name (default: main)
+      branch: # optional, default is main
+      # Clone with submodules
+      submodule: # optional, default is false
+
+name: Use latest release
+steps:
+- uses: actions/checkout@v4
+- uses: subosito/flutter-action@v2
+  with:
+    flutter-version: '1.22.x'
+    channel: 'dev'
+- run: flutter --version
