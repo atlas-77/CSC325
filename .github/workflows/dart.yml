@@ -16,6 +16,7 @@ jobs:
               channel: 'stable'
           - run: cd flutterapp/app/nathan_johnson_flutterapp
           - run: flutter doctor
-          ##- run: flutter pub get
+          - run: flutter pub add 'dev:flutter_test:{"sdk":"flutter"}'  'dev:integration_test:{"sdk":"flutter"}'
+          #- run: flutter pub get
           - run: flutter test
           - run: flutter build web
