@@ -7,16 +7,16 @@ on:
     branches: [ "main" ]
 
 jobs:
-       build:
-         name: build
-         runs-on: ubuntu-latest
-         steps:
-          - uses: actions/checkout@v4
-          - uses: subosito/flutter-action@v2
-            with:
-              channel: 'stable'
-          - run: cd flutterapp/app/nathan_johnson_flutterapp
-          - run: flutter doctor
-       #   - run: flutter pub get
-          - run: flutter test
-          - run: flutter build web
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - working-directory: flutterapp/app/nathan_johnson_flutterapp
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - run: flutter doctor
+      #- run: flutter pub get
+      - run: flutter test
+      - run: flutter build web
