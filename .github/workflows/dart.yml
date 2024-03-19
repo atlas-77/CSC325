@@ -12,9 +12,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
-    runs-on: ubuntu-latest
     jobs:
         flutterVersion:
+        runs-on: ubuntu-latest
         steps:   
           name: flutterVersion
           run: flutter --version
