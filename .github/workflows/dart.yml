@@ -15,7 +15,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - working-directory: flutterapp/app/nathan_johnson_flutterapp
+      - working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
         run: flutter doctor
       #- run: flutter pub get
       - run: flutter test
