@@ -4,7 +4,6 @@
 # documentation.
 
 name: Dart
-working-directory: ./.github/workflow
 
 on:
   push:
@@ -12,32 +11,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
-    jobs:
-      flutterVersion:
-        runs-on: ubuntu-latest
-        steps:   
-          name: flutterVersion
-          run: flutter --version
-      analyzeSource:
-          steps:   
-          # Uncomment this step to verify the use of 'dart format' on each commit.
-          # - name: Verify formatting
-          #   run: dart format --output=none --set-exit-if-changed .
-    
-          # Consider passing '--fatal-infos' for slightly stricter analysis.
-          name: analyzeProjectSource
-          run: flutter analyze
-      runTests:
-          # Your project will need to have tests in test/ and a dependency on
-          # package:test for this step to succeed. Note that Flutter projects will
-          # want to change this to 'flutter test'.
-          steps:
-          name: runTest
-          run: flutter test
-
-      build:
-          steps:   
-          name: run web-app
-          run: flutter pub get
-          uses: subosito/flutter-action@v2.13.0
-          run: flutter build web    
+jobs:
+       build:
+         runs-on: ubuntu-latest
+         steps:
+          - uses: actions/checkout@v4
+          - uses: subosito/flutter-action@v2
+            with:
+              channel: 'stable'
+          - run: flutter pub get
+          - run: flutter test
+          - run: flutter build web
