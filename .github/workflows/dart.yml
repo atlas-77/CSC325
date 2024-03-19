@@ -17,5 +17,5 @@ jobs:
           - run: cd flutterapp/app/nathan_johnson_flutterapp
           - run: flutter doctor
        #   - run: flutter pub get
-          - run: flutter test widget_test.dart
+          - run: flutter test
           - run: flutter build web
