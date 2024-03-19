@@ -4,9 +4,7 @@
 # documentation.
 
 name: Dart
-
-uses: actions/checkout@v4
-uses: subosito/flutter-action@v2
+working-directory: ./.github/workflow
 
 on:
   push:
@@ -23,6 +21,7 @@ jobs:
           name: Flutter version
           run: flutter --version
         analyzeSource:
+          steps:   
           # Uncomment this step to verify the use of 'dart format' on each commit.
           # - name: Verify formatting
           #   run: dart format --output=none --set-exit-if-changed .
@@ -35,14 +34,10 @@ jobs:
           # package:test for this step to succeed. Note that Flutter projects will
           # want to change this to 'flutter test'.
 
-        buildAPK: 
-          name: run tests + build
-          run: flutter pub get
-          run: flutter test
-          run: flutter build apk
-          run: flutter build appbundle
         buildWeb:
+          steps:   
           name: run web-app
           run: flutter pub get
+          uses: subosito/flutter-action@v2.13.0
           run: flutter test
           run: flutter build web    
