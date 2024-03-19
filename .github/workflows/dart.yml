@@ -8,6 +8,9 @@ on:
 
 jobs:
   build:
+    defaults: 
+      run: 
+        working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
     runs-on: ubuntu-latest
     name: build
     steps:
@@ -15,7 +18,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
+      #- working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
         run: flutter doctor
       #- run: flutter pub get
       - run: flutter --version
