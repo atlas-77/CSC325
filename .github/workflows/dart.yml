@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     name: build
     steps:
-      - working-directory: flutterapp/app/nathan_johnson_flutterapp
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - working-directory: flutterapp/app/nathan_johnson_flutterapp
       - run: flutter doctor
       #- run: flutter pub get
       - run: flutter test
