@@ -16,7 +16,7 @@ on:
     jobs:
         flutterVersion:
         steps:   
-          name: Flutter version
+          name: flutterVersion
           run: flutter --version
         analyzeSource:
           steps:   
@@ -25,17 +25,19 @@ on:
           #   run: dart format --output=none --set-exit-if-changed .
     
           # Consider passing '--fatal-infos' for slightly stricter analysis.
-          name: Analyze project source
+          name: analyzeProjectSource
           run: flutter analyze
         runTests:
           # Your project will need to have tests in test/ and a dependency on
           # package:test for this step to succeed. Note that Flutter projects will
           # want to change this to 'flutter test'.
+          steps:
+          name: runTest
+          run: flutter test
 
-        buildWeb:
+        build:
           steps:   
           name: run web-app
           run: flutter pub get
           uses: subosito/flutter-action@v2.13.0
-          run: flutter test
           run: flutter build web    
