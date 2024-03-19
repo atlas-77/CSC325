@@ -13,6 +13,7 @@ To be honest, I use the very basics of git commands here, that is,
 - git add (file or folder to be pushed)
 - git commit -m "message" (see Repository Setup for message scheme)
 - git push
+
 I haven't reverted to previous branches, nor have I merged branches (see Repository Setup).
 ## Collaboration Features
 Git as a VCS with GitHub, as stated under Introduction, allows teams to work in tandem while not interfering with each other's work. Pull requests are made from a user's branch and may be reviewed by other team members before being accepted and pulled, or pushed into main. The code review step allows other team members to review the pull request and comment on any mistakes or other topics of importance. Conflict resolution must happen when changed have been made to the same files in seperate branches, and those branches are trying to merge. Merge conflicts may occur, and when they do, the user can look through conflicts in order to select the changes they want to keep. GitHub also allows for access to a code base from different machines via the clone command, which makes remote development more accessible.
