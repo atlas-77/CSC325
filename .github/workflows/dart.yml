@@ -14,7 +14,7 @@ jobs:
           - uses: subosito/flutter-action@v2
             with:
               channel: 'stable'
-          - run: cd flutterapp/flutter
+          - run: cd flutterapp/app/nathan_johnson_flutterapp
           - run: flutter pub get
           - run: flutter test
           - run: flutter build web
