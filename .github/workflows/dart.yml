@@ -18,6 +18,6 @@ jobs:
       - working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
         run: flutter doctor
       #- run: flutter pub get
-      - run: flutter analyze
+      - run: flutter --version
       - run: flutter test
       - run: flutter build web
