@@ -1,5 +1,5 @@
 name: Flutter Deploy
-permissions: read-all|write-all
+permissions: read-all
 on:
   push:
     branches: [ "main" ]
