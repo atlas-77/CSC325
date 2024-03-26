@@ -15,12 +15,8 @@ jobs:
     name: deploy
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./flutterapp/app/nathan_johnson_flutterapp/web
            
