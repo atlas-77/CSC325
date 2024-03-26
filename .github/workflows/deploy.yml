@@ -1,1 +1,25 @@
+name: Flutter Deploy
 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    defaults: 
+      run: 
+        working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_dir: ./web
+ 
+
+#In working through this, I used a basic Dart workflow/action templete 
+#and also used code from https://github.com/marketplace/actions/flutter-action to acheive functionality. 
+#I had to specify the working directory in order to make the flutter commands work, as they were running at the root of my repo.
