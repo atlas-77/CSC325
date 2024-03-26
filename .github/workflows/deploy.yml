@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     name: deploy
     steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
       - uses: peaceiris/actions-gh-pages@v3
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
