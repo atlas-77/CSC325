@@ -18,7 +18,7 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./flutterapp/app/nathan_johnson_flutterapp/lib
+          publish_dir: ./flutterapp/app/nathan_johnson_flutterapp/
           enable_jekyll: true
            
            
