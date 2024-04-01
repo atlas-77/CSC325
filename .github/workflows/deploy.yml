@@ -10,7 +10,7 @@ jobs:
   deploy:
     defaults: 
       run: 
-        working-directory: ./flutterapp/app/application/
+        working-directory: ./flutterapp/app/application/build/web/
     runs-on: ubuntu-latest
     name: deploy
     steps:
