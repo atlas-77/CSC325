@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     name: deploy
     steps:
-      - run: flutter build web
       - uses: actions/checkout@v4
+      - run: flutter build web
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
