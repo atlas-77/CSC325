@@ -10,7 +10,7 @@ jobs:
   build:
     defaults: 
       run: 
-        working-directory: ./flutterapp/app/nathan_johnson_flutterapp/
+        working-directory: ./flutterapp/app/application/
     runs-on: ubuntu-latest
     name: build
     steps:
