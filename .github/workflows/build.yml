@@ -23,6 +23,21 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web
+
+    
+  deploy:
+    defaults: 
+      run: 
+        working-directory: ./flutterapp/app/application
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./flutterapp/app/application/build/web/
+          enable_jekyll: true
  
 
 #In working through this, I used a basic Dart workflow/action templete 
