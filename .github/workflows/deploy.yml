@@ -20,5 +20,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./flutterapp/app/application/build/web/
           enable_jekyll: true
-           
-           
+      - run: flutter run          
