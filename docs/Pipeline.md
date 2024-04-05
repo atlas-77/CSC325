@@ -1,1 +1,8 @@
-placeholder
+# CI/CD Pipeline
+## Environment
+The infrastructure and environment where this pipeline operates is Windows as an operating system, using GitHub as a version control service. It would likely work on versions of Linux similar to Ubuntu, since that is what our DevContainer runs on, as well as our build and deploy stages. We do not have a Linux machine, so we have not tested this, ditto for Apple silicone. We have not considered network configurations indepth, so there are no specifics involving them in our project.
+## Tools
+GitHub Actions was used in our pipeline. We chose this because of its close integration with GitHub, our VCS of choice. GitHub Actions' strengths include easy automation of workflows, with an extensive list of triggers, as well as integrated deployment/publishing capability via GitHub Pages. It does have limited performance on the free tier, as GitHub's free tier runners won't run workflows instantly, but that isn't a deep issue for us. 
+## Automation Process
+Our build and deploy phases are automated through GitHub Actions via yml files. Our build stage starts by first, using a checkout action to clone our repo into the runner, then using a [Flutter action](https://github.com/subosito/flutter-action) to allow the runner to use Flutter commands. We then run `flutter test` and `flutter build web` in order to run automated tests and build the app, finally reaching our deploy phase. 
+Our deploy phase starts by checking out our repo, same as the build phase. Then, we use a [GitHub Pages publishing action](https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-source-directory-publish_dir) with our repo's token, and Jekyll for page format, in order to automatically push our webapp to a gh-pages branch and publish it. 
